@@ -8,7 +8,11 @@ trigger:
 
 pool:
   vmImage: 'ubuntu-latest'
-
+- task: CopyPublishBuildArtifacts@1
+  inputs:
+    CopyRoot: '/'
+    ArtifactName: 'urlMapper'
+    ArtifactType: 'FilePath'
 variables:
   buildConfiguration: 'Release'
 
